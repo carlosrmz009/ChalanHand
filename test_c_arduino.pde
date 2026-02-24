@@ -102,7 +102,7 @@ void checkConnection() {
 void uploadSketch(String sketchName) {
   println("loading " + sketchName + "...");
   
-  String inoPath = "/home/carlos/sketchbook/test_c_arduino/" + sketchName; 
+  String inoPath = sketchPath(sketchName);
   
   String cliCommand = "arduino-cli compile --upload -p " + arduinoPort + " --fqbn arduino:renesas_uno:unor4wifi '" + inoPath + "'";
   
